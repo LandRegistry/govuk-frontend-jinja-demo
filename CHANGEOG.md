@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased](https://github.com/matthew-shaw/govuk-frontend-jinja-example/compare/0.2.0...master)
 
-## [0.2.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/0.2.0)
+### Added
+
+- `Procfile` and `gunicorn` requirements to deploy to Heroku
+
+## [0.2.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/0.2.0) - 18/06/2020
 
 ### Changed
 
@@ -15,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed `app/*` prefix from template
 - Changed `index.html` template to extend base [GOV.UK page template](https://design-system.service.gov.uk/styles/page-template/)
 
-## [0.1.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/0.1.0)
+## [0.1.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/0.1.0) - 12/06/2020
 
 ### Added
 

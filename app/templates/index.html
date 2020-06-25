@@ -28,7 +28,7 @@
 {%- from 'govuk_frontend_jinja/components/accordion/macro.html' import govukAccordion -%}
 {%- from 'govuk_frontend_jinja/components/tag/macro.html' import govukTag -%}
 
-{% set assetPath = url_for('static', filename='assets').rstrip('/') %}
+{% set assetPath = url_for('static', filename='').rstrip('/') %}
 
 {% block head %}
   <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.7.0.min.css') }}" /><!--<![endif]-->

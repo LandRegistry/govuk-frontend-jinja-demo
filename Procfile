@@ -1,1 +1,1 @@
-web: gunicorn app:app --log-file -
+web: ./build.sh; gunicorn app:app --log-file -

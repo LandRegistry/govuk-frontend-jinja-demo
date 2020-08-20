@@ -31,13 +31,13 @@
 {% set assetPath = url_for('static', filename='').rstrip('/') %}
 
 {% block head %}
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.7.0.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.7.0.min.css') }}" /><![endif]-->
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.8.1.min.css') }}" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.8.1.min.css') }}" /><![endif]-->
 {% endblock %}
 
 {% block bodyEnd %}
   <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.7.0.min.js') }}"> </script>
+  <script src="{{ url_for('static', filename='govuk-frontend-3.8.1.min.js') }}"> </script>
   <script>window.GOVUKFrontend.initAll()</script>
   <!--<![endif]-->
 {% endblock %}
@@ -282,12 +282,10 @@
       'id': "contact-by-email",
       'name': "contact-by-email",
       'type': "email",
+      'spellcheck': false,
       'classes': "govuk-!-width-one-third",
       'label': {
         'text': "Email address"
-      },
-      'attributes': {
-        'spellcheck': "false"
       }
     }) }}
     {% endset -%}
@@ -353,7 +351,7 @@
         }
       ]
     }) }}
-  <h3 class="govuk-heading-m">Smaller checkboxes</h3>
+    <h3 class="govuk-heading-m">Smaller checkboxes</h3>
     {{ govukCheckboxes({
       'idPrefix': "organisation",
       'name': "organisation",
@@ -657,12 +655,10 @@
       'id': "contact-by-email",
       'name': "contact-by-email",
       'type': "email",
+      'spellcheck': false,
       'classes': "govuk-!-width-one-third",
       'label': {
         'text': "Email address"
-      },
-      'attributes': {
-        'spellcheck': "false"
       }
     }) }}
     {% endset -%}
@@ -1786,10 +1782,12 @@
       'name': "one-quarter"
     }) }}
     
-    <h3 class="govuk-heading-m">Numbers</h3>
+    <h3 class="govuk-heading-m">Whole numbers</h3>
     {{ govukInput({
       'label': {
-        'text': "Account number"
+        'text': "What is your account number?",
+        'classes': "govuk-label--l",
+        'isPageHeading': true
       },
       'classes': "govuk-input--width-10",
       'hint': {
@@ -1799,9 +1797,21 @@
       'name': "account-number",
       'inputmode': "numeric",
       'pattern': "[0-9]*",
-      'attributes': {
-        'spellcheck': "false"
-      }
+      'spellcheck': false
+    }) }}
+
+    <h3 class="govuk-heading-m">Decimal numbers</h3>
+    {{ govukInput({
+      'label': {
+        'text': "Cost per item, in pounds"
+      },
+      'classes': "govuk-input--width-10",
+      'hint': {
+        'text': "For example, 23.99"
+      },
+      'id': "cost",
+      'name': "cost",
+      'spellcheck': false
     }) }}
 
     <h3 class="govuk-heading-m">Hint text</h3>
@@ -1834,9 +1844,7 @@
       },
       'id': "name",
       'name': "name",
-      'attributes': {
-        'spellcheck': "false"
-      }
+      'spellcheck': false
     }) }}
   </div> 
 </div>

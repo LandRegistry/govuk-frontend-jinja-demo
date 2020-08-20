@@ -1,5 +1,5 @@
 flask==1.1.2
-govuk-frontend-jinja==0.2.1
+govuk-frontend-jinja==1.0.0
 gunicorn==20.0.4
 python-dotenv==0.14.0
 # Generated with piprot 0.9.10

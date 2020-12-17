@@ -31,13 +31,13 @@
 {% set assetPath = url_for('static', filename='').rstrip('/') %}
 
 {% block head %}
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.10.1.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.10.1.min.css') }}" /><![endif]-->
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.10.2.min.css') }}" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.10.2.min.css') }}" /><![endif]-->
 {% endblock %}
 
 {% block bodyEnd %}
   <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.10.1.min.js') }}"> </script>
+  <script src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
   <script>window.GOVUKFrontend.initAll()</script>
   <!--<![endif]-->
 {% endblock %}

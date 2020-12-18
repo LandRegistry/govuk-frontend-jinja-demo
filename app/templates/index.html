@@ -27,19 +27,47 @@
 {%- from 'govuk_frontend_jinja/components/summary-list/macro.html' import govukSummaryList -%}
 {%- from 'govuk_frontend_jinja/components/accordion/macro.html' import govukAccordion -%}
 {%- from 'govuk_frontend_jinja/components/tag/macro.html' import govukTag -%}
+{%- from 'govuk_frontend_jinja/components/notification-banner/macro.html' import govukNotificationBanner -%}
 
 {% set assetPath = url_for('static', filename='').rstrip('/') %}
 
 {% block head %}
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.8.1.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.8.1.min.css') }}" /><![endif]-->
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.10.2.min.css') }}" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.10.2.min.css') }}" /><![endif]-->
 {% endblock %}
 
 {% block bodyEnd %}
   <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.8.1.min.js') }}"> </script>
+  <script src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
   <script>window.GOVUKFrontend.initAll()</script>
   <!--<![endif]-->
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+  'homepageUrl': "#",
+  'serviceName': "GOV.UK Frontend Jinja Example",
+  'serviceUrl': "#",
+  'navigation': [
+    {
+      'href': "#1",
+      'text': "Navigation item 1",
+      'active': true
+    },
+    {
+      'href': "#2",
+      'text': "Navigation item 2"
+    },
+    {
+      'href': "#3",
+      'text': "Navigation item 3"
+    },
+    {
+      'href': "#4",
+      'text': "Navigation item 4"
+    }
+  ]
+}) }}
 {% endblock %}
 
 {% block content %}
@@ -492,6 +520,41 @@
   <div class="govuk-grid-column-two-thirds">
     {{ govukInsetText({
       'text': "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+    }) }}
+  </div> 
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- Notification Banner  Component -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-l">Notification banner</h2>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <h3 class="govuk-heading-m">Telling the user about something that’s happening elsewhere</h3>
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        You have 7 days left to send your application.
+        <a class="govuk-notification-banner__link" href="#">View application</a>.
+      </p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      'html': html
+    }) }}
+
+    <h3 class="govuk-heading-m">Reacting to something the user has done</h3>
+    {% set html %}
+      <p class="govuk-notification-banner__heading">
+        Training outcome recorded and trainee withdrawn
+      </p>
+      <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@department.gov.uk</a> if you think there's a problem.</p>
+    {% endset %}
+
+    {{ govukNotificationBanner({
+      'html': html,
+      'type': 'success'
     }) }}
   </div> 
 </div>
@@ -1844,6 +1907,25 @@
       },
       'id': "name",
       'name': "name",
+      'spellcheck': false
+    }) }}
+    
+    <h3 class="govuk-heading-m">Prefixes and suffixes</h3>
+    {{ govukInput({
+      'id': "cost-per-item",
+      'name': "cost-per-item",
+      'label': {
+        'text': "What is the cost per item, in pounds?",
+        'classes': "govuk-label--l",
+        'isPageHeading': true
+      },
+      'prefix': {
+        'text': "£"
+      },
+      'suffix': {
+        'text': "per item"
+      },
+      'classes': "govuk-input--width-5",
       'spellcheck': false
     }) }}
   </div> 

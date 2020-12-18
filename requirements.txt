@@ -6,7 +6,7 @@
 #
 click==7.1.2              # via flask
 flask==1.1.2              # via -r requirements.in
-govuk-frontend-jinja==1.0.0  # via -r requirements.in
+govuk-frontend-jinja==1.1.0  # via -r requirements.in
 gunicorn==20.0.4          # via -r requirements.in
 itsdangerous==1.1.0       # via flask
 jinja2==2.11.2            # via flask

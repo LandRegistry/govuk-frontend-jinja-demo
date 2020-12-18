@@ -1,4 +1,4 @@
 flask==1.1.2
-govuk-frontend-jinja==1.0.0
+govuk-frontend-jinja==1.1.0
 gunicorn==20.0.4
 python-dotenv==0.15.0

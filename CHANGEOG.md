@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [1.1.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/1.1.0) - 18/12/2020
 
+### Added
+
+- Text input prefix and suffix example
+- Header component with navigation example
+- Notification banner component examples
+
 ### Changed
 
 - Updated `govuk-frontend-jinja` to [release 1.1.0](https://github.com/LandRegistry/govuk-frontend-jinja/releases/tag/1.1.0)

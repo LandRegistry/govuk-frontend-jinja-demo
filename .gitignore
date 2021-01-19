@@ -4,6 +4,7 @@
 
 ### GOV.UK Frontend ###
 app/static*
+govuk_components*
 
 ### Flask ###
 instance/*

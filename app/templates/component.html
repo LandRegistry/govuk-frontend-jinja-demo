@@ -48,7 +48,7 @@
 {% endblock %}
 
 {% block header %}
-{{ govukHeader({
+  {{ govukHeader({
     'homepageUrl': url_for('index'),
     'serviceName': "GOV.UK Frontend Jinja",
     'serviceUrl': url_for('index')
@@ -56,86 +56,86 @@
 {% endblock %}
 
 {% block beforeContent %}
-{{ govukBackLink({
+  {{ govukBackLink({
     'text': "Back",
     'href': url_for('index')
   }) }}
 {% endblock %}
 
 {% block content %}
-<span class="govuk-caption-xl">Components</span>
-<h1 class="govuk-heading-xl">{{fixtures.component | replace("-", " ") | capitalize}}</h1>
+  <span class="govuk-caption-xl">Components</span>
+  <h1 class="govuk-heading-xl">{{fixtures.component | replace("-", " ") | capitalize}}</h1>
 
-{% for fixture in fixtures.fixtures if fixture.hidden == False %}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h2 id="{{fixture.name | replace(' ', '-')}}" class="govuk-heading-l">{{fixture.name | capitalize}}</h2>
-        {% if fixtures.component == 'accordion' %}
-        {{ govukAccordion(fixture.options) }}
-        {% elif fixtures.component == 'back-link' %}
-        {{ govukBackLink(fixture.options)}}
-        {% elif fixtures.component == 'breadcrumbs' %}
-        {{ govukBreadcrumbs(fixture.options)}}
-        {% elif fixtures.component == 'button' %}
-        {{ govukButton(fixture.options)}}
-        {% elif fixtures.component == 'character-count' %}
-        {{ govukCharacterCount(fixture.options)}}
-        {% elif fixtures.component == 'checkboxes' %}
-        {{ govukCheckboxes(fixture.options)}}
-        {% elif fixtures.component == 'date-input' %}
-        {{ govukDateInput(fixture.options)}}
-        {% elif fixtures.component == 'details' %}
-        {{ govukDetails(fixture.options)}}
-        {% elif fixtures.component == 'error-message' %}
-        {{ govukErrorMessage(fixture.options)}}
-        {% elif fixtures.component == 'error-summary' %}
-        {{ govukErrorSummary(fixture.options)}}
-        {% elif fixtures.component == 'fieldset' %}
-        {{ govukFieldset(fixture.options)}}
-        {% elif fixtures.component == 'file-upload' %}
-        {{ govukFileUpload(fixture.options)}}
-        {% elif fixtures.component == 'footer' %}
-        {{ govukFooter(fixture.options)}}
-        {% elif fixtures.component == 'header' %}
-        {{ govukHeader(fixture.options)}}
-        {% elif fixtures.component == 'hint' %}
-        {{ govukHint(fixture.options)}}
-        {% elif fixtures.component == 'input' %}
-        {{ govukInput(fixture.options)}}
-        {% elif fixtures.component == 'inset-text' %}
-        {{ govukInsetText(fixture.options)}}
-        {% elif fixtures.component == 'label' %}
-        {{ govukLabel(fixture.options)}}
-        {% elif fixtures.component == 'notification-banner' %}
-        {{ govukNotificationBanner(fixture.options)}}
-        {% elif fixtures.component == 'panel' %}
-        {{ govukPanel(fixture.options)}}
-        {% elif fixtures.component == 'phase-banner' %}
-        {{ govukPhaseBanner(fixture.options)}}
-        {% elif fixtures.component == 'radios' %}
-        {{ govukRadios(fixture.options)}}
-        {% elif fixtures.component == 'select' %}
-        {{ govukSelect(fixture.options)}}
-        {% elif fixtures.component == 'skip-link' %}
-        {{ govukSkipLink(fixture.options)}}
-        {% elif fixtures.component == 'summary-list' %}
-        {{ govukSummaryList(fixture.options)}}
-        {% elif fixtures.component == 'table' %}
-        {{ govukTable(fixture.options)}}
-        {% elif fixtures.component == 'tabs' %}
-        {{ govukTabs(fixture.options)}}
-        {% elif fixtures.component == 'tag' %}
-        {{ govukTag(fixture.options)}}
-        {% elif fixtures.component == 'textarea' %}
-        {{ govukTextarea(fixture.options)}}
-        {% elif fixtures.component == 'warning-text' %}
-        {{ govukWarningText(fixture.options)}}
-        {% endif %}
-        <h3 class="govuk-heading-m">Options</h3>
-        <p class="govuk-body">{{fixture.options}}</p>
+  {% for fixture in fixtures.fixtures if fixture.hidden == False %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 id="{{fixture.name | replace(' ', '-')}}" class="govuk-heading-l">{{fixture.name | capitalize}}</h2>
+            {% if fixtures.component == 'accordion' %}
+              {{ govukAccordion(fixture.options) }}
+            {% elif fixtures.component == 'back-link' %}
+              {{ govukBackLink(fixture.options)}}
+            {% elif fixtures.component == 'breadcrumbs' %}
+              {{ govukBreadcrumbs(fixture.options)}}
+            {% elif fixtures.component == 'button' %}
+              {{ govukButton(fixture.options)}}
+            {% elif fixtures.component == 'character-count' %}
+              {{ govukCharacterCount(fixture.options)}}
+            {% elif fixtures.component == 'checkboxes' %}
+              {{ govukCheckboxes(fixture.options)}}
+            {% elif fixtures.component == 'date-input' %}
+              {{ govukDateInput(fixture.options)}}
+            {% elif fixtures.component == 'details' %}
+              {{ govukDetails(fixture.options)}}
+            {% elif fixtures.component == 'error-message' %}
+              {{ govukErrorMessage(fixture.options)}}
+            {% elif fixtures.component == 'error-summary' %}
+              {{ govukErrorSummary(fixture.options)}}
+            {% elif fixtures.component == 'fieldset' %}
+              {{ govukFieldset(fixture.options)}}
+            {% elif fixtures.component == 'file-upload' %}
+              {{ govukFileUpload(fixture.options)}}
+            {% elif fixtures.component == 'footer' %}
+              {{ govukFooter(fixture.options)}}
+            {% elif fixtures.component == 'header' %}
+              {{ govukHeader(fixture.options)}}
+            {% elif fixtures.component == 'hint' %}
+              {{ govukHint(fixture.options)}}
+            {% elif fixtures.component == 'input' %}
+              {{ govukInput(fixture.options)}}
+            {% elif fixtures.component == 'inset-text' %}
+              {{ govukInsetText(fixture.options)}}
+            {% elif fixtures.component == 'label' %}
+              {{ govukLabel(fixture.options)}}
+            {% elif fixtures.component == 'notification-banner' %}
+              {{ govukNotificationBanner(fixture.options)}}
+            {% elif fixtures.component == 'panel' %}
+              {{ govukPanel(fixture.options)}}
+            {% elif fixtures.component == 'phase-banner' %}
+              {{ govukPhaseBanner(fixture.options)}}
+            {% elif fixtures.component == 'radios' %}
+              {{ govukRadios(fixture.options)}}
+            {% elif fixtures.component == 'select' %}
+              {{ govukSelect(fixture.options)}}
+            {% elif fixtures.component == 'skip-link' %}
+              {{ govukSkipLink(fixture.options)}}
+            {% elif fixtures.component == 'summary-list' %}
+              {{ govukSummaryList(fixture.options)}}
+            {% elif fixtures.component == 'table' %}
+              {{ govukTable(fixture.options)}}
+            {% elif fixtures.component == 'tabs' %}
+              {{ govukTabs(fixture.options)}}
+            {% elif fixtures.component == 'tag' %}
+              {{ govukTag(fixture.options)}}
+            {% elif fixtures.component == 'textarea' %}
+              {{ govukTextarea(fixture.options)}}
+            {% elif fixtures.component == 'warning-text' %}
+              {{ govukWarningText(fixture.options)}}
+            {% endif %}
+            <h3 class="govuk-heading-m">Options</h3>
+            <p class="govuk-body">{{fixture.options}}</p>
+        </div>
     </div>
-</div>
-{% endfor %}
+  {% endfor %}
 {% endblock %}
 
 {% block bodyEnd %}

@@ -131,8 +131,10 @@
             {% elif fixtures.component == 'warning-text' %}
               {{ govukWarningText(fixture.options)}}
             {% endif %}
-            <h3 class="govuk-heading-m">Options</h3>
+            <h3 class="govuk-heading-m">Jinja macro options</h3>
             <p class="govuk-body">{{fixture.options}}</p>
+            <h3 class="govuk-heading-m">HTML</h3>
+            <p class="govuk-body">{{fixture.html}}</p>
         </div>
     </div>
   {% endfor %}

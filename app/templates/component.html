@@ -66,6 +66,19 @@
   <span class="govuk-caption-xl">Components</span>
   <h1 class="govuk-heading-xl">{{fixtures.component | replace("-", " ") | capitalize}}</h1>
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">Examples:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        {% for fixture in fixtures.fixtures if fixture.hidden == False %}
+          <li>
+            <a class="govuk-link" href="#{{fixture.name | replace(' ', '-')}}">{{fixture.name | capitalize}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
   {% for fixture in fixtures.fixtures if fixture.hidden == False %}
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
@@ -131,10 +144,11 @@
             {% elif fixtures.component == 'warning-text' %}
               {{ govukWarningText(fixture.options)}}
             {% endif %}
-            <h3 class="govuk-heading-m">Jinja macro options</h3>
-            <p class="govuk-body">{{fixture.options}}</p>
-            <h3 class="govuk-heading-m">HTML</h3>
-            <p class="govuk-body">{{fixture.html}}</p>
+
+            {{ govukDetails({
+              'summaryText': "Jinja macro options",
+              'text': fixture.options
+            })}}
         </div>
     </div>
   {% endfor %}

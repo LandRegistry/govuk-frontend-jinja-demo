@@ -1,4 +1,5 @@
 import json
+import os
 
 from flask import render_template
 
@@ -7,7 +8,10 @@ from app import app
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    components = os.listdir("govuk_components")
+    components.sort()
+
+    return render_template("index.html", components=components)
 
 
 @app.route("/components/<string:component>")

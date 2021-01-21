@@ -25,8 +25,17 @@
 {% endblock %}
 
 {% block content %}
-  <span class="govuk-caption-xl">Example application</span>
   <h1 class="govuk-heading-xl">GOV.UK Frontend Jinja</h1>
+
+  <h2 class="govuk-heading-l">Components</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    {% for component in components %}
+    <li>
+      <a class="govuk-link" href="{{ url_for('component', component=component) }}">{{component | replace("-", " ") | capitalize}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
 {% endblock %}
 
 {% block bodyEnd %}

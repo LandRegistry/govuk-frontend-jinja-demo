@@ -25,17 +25,21 @@
 {% endblock %}
 
 {% block content %}
-  <h1 class="govuk-heading-xl">GOV.UK Frontend Jinja</h1>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">GOV.UK Frontend Jinja</h1>
+      <p class="govuk-body-l">This is a <a href="https://www.python.org/" class="govuk-link">Python</a> application using the <a href="https://flask.palletsprojects.com/en/1.1.x/" class="govuk-link">Flask</a> framework that demonstrates the <a href="https://jinja.palletsprojects.com/en/2.11.x/" class="govuk-link">Jinja</a> port of <a href="https://frontend.design-system.service.gov.uk/" class="govuk-link">GOV.UK Frontend</a>.</p>
 
-  <h2 class="govuk-heading-l">Components</h2>
-  <ul class="govuk-list govuk-list--bullet">
-    {% for component in components %}
-    <li>
-      <a class="govuk-link" href="{{ url_for('component', component=component) }}">{{component | replace("-", " ") | capitalize}}</a>
-    </li>
-    {% endfor %}
-  </ul>
-
+      <h2 class="govuk-heading-l">Components</h2>
+      <ul class="govuk-list govuk-list--bullet">
+        {% for component in components %}
+        <li>
+          <a class="govuk-link" href="{{ url_for('component', component=component) }}">{{component | replace("-", " ") | capitalize}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>  
 {% endblock %}
 
 {% block bodyEnd %}

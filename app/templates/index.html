@@ -1,34 +1,11 @@
-{% extends 'govuk_frontend_jinja/template.html' %}
-
-{% set assetPath = url_for('static', filename='').rstrip('/') %}
-
-{% block pageTitle %}GOV.UK Frontend Jinja{% endblock %}
-
-{% block head %}
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.10.2.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.10.2.min.css') }}" /><![endif]-->
-{% endblock %}
-
-{% block skipLink %}
-  {{ govukSkipLink({
-    'href': "#main-content",
-    'text': "Skip to main content"
-  }) }}
-{% endblock %}
-
-{% block header %}
-  {{ govukHeader({
-    'homepageUrl': url_for('index'),
-    'serviceName': "GOV.UK Frontend Jinja",
-    'serviceUrl': url_for('index')
-  }) }}
-{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <span class="govuk-caption-xl">Demonstration</span>
       <h1 class="govuk-heading-xl">GOV.UK Frontend Jinja</h1>
-      <p class="govuk-body-l">This is a <a href="https://www.python.org/" class="govuk-link">Python</a> application using the <a href="https://flask.palletsprojects.com/en/1.1.x/" class="govuk-link">Flask</a> framework that demonstrates the <a href="https://jinja.palletsprojects.com/en/2.11.x/" class="govuk-link">Jinja</a> port of <a href="https://frontend.design-system.service.gov.uk/" class="govuk-link">GOV.UK Frontend</a>.</p>
+      <p class="govuk-body-l">This is a simple <a href="https://www.python.org/" class="govuk-link">Python</a> application using the <a href="https://flask.palletsprojects.com/en/1.1.x/" class="govuk-link">Flask</a> framework that demonstrates the <a href="https://jinja.palletsprojects.com/en/2.11.x/" class="govuk-link">Jinja</a> port of <a href="https://frontend.design-system.service.gov.uk/" class="govuk-link">GOV.UK Frontend</a>.</p>
 
       <h2 class="govuk-heading-l">Components</h2>
       <ul class="govuk-list govuk-list--bullet">
@@ -40,11 +17,4 @@
       </ul>
     </div>
   </div>  
-{% endblock %}
-
-{% block bodyEnd %}
-  <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
-  <script>window.GOVUKFrontend.initAll()</script>
-  <!--<![endif]-->
 {% endblock %}

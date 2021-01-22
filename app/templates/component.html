@@ -1,4 +1,4 @@
-{% extends 'govuk_frontend_jinja/template.html' %}
+{% extends "base.html" %}
 
 {%- from 'govuk_frontend_jinja/components/back-link/macro.html' import govukBackLink -%}
 {%- from 'govuk_frontend_jinja/components/skip-link/macro.html' import govukSkipLink -%}
@@ -31,29 +31,7 @@
 {%- from 'govuk_frontend_jinja/components/textarea/macro.html' import govukTextarea -%}
 {%- from 'govuk_frontend_jinja/components/warning-text/macro.html' import govukWarningText -%}
 
-{% set assetPath = url_for('static', filename='').rstrip('/') %}
-
 {% block pageTitle %}{{fixtures.component | replace("-", " ") | capitalize}} – GOV.UK Frontend Jinja{% endblock %}
-
-{% block head %}
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.10.2.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.10.2.min.css') }}" /><![endif]-->
-{% endblock %}
-
-{% block skipLink %}
-  {{ govukSkipLink({
-    'href': "#main-content",
-    'text': "Skip to main content"
-  }) }}
-{% endblock %}
-
-{% block header %}
-  {{ govukHeader({
-    'homepageUrl': url_for('index'),
-    'serviceName': "GOV.UK Frontend Jinja",
-    'serviceUrl': url_for('index')
-  }) }}
-{% endblock %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -152,11 +130,4 @@
         </div>
     </div>
   {% endfor %}
-{% endblock %}
-
-{% block bodyEnd %}
-  <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
-  <script>window.GOVUKFrontend.initAll()</script>
-  <!--<![endif]-->
 {% endblock %}

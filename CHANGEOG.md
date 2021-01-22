@@ -4,7 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/matthew-shaw/govuk-frontend-jinja-example/compare/1.0.0...main)
+## [Unreleased](https://github.com/matthew-shaw/govuk-frontend-jinja-example/compare/1.2.0...main)
+
+## [1.2.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/1.1.0) - 22/01/2021
+
+### Added
+
+- Using GOV.UK Frontend test fixtures to generate an index of components along with a page per component that renders every visual fixture along with its Jinja and HTML source.
+
+### Changed
+
+- Updated index page with more description about what this app is for.
+- Put links to source, build, package and demo along with credit to the package contributors, in page footer.
+
+### Removed
+
+- Manually created index page of component examples.
 
 ## [1.1.0](https://github.com/matthew-shaw/govuk-frontend-jinja-example/releases/tag/1.1.0) - 18/12/2020
 

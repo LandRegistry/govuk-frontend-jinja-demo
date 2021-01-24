@@ -45,7 +45,7 @@
 
 {% block bodyEnd %}
   <!--[if gt IE 8]><!-->
-  <script nonce="{{csp_nonce()}}" src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
-  <script nonce="{{csp_nonce()}}">window.GOVUKFrontend.initAll()</script>
+  <script src="{{ url_for('static', filename='govuk-frontend-3.10.2.min.js') }}"> </script>
+  <script>window.GOVUKFrontend.initAll()</script>
   <!--<![endif]-->
 {% endblock %}

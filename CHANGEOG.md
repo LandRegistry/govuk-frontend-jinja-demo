@@ -4,9 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/LandRegistry/govuk-frontend-jinja-example/compare/1.2.0...main)
+## [Unreleased](https://github.com/LandRegistry/govuk-frontend-jinja-example/compare/1.3.0...main)
 
-## [1.2.0](https://github.com/LandRegistry/govuk-frontend-jinja-example/releases/tag/1.1.0) - 22/01/2021
+## [1.3.0](https://github.com/LandRegistry/govuk-frontend-jinja-example/releases/tag/1.3.0) - 25/01/2021
+
+### Added
+
+- Error handlers and pages for 404 and 500 errors.
+- Compressed response encoding support (gzip, brotli and deflate).
+- Strict content security policy (self plus specific in-line script hashes).
+- Additional security related HTTP headers implemented (strict transport security, referrer policy, XSS protection etc).
+- HTML meta tags (description, keywords and author).
+- Trim and strip whitespace around content blocks.
+
+### Removed
+
+- Duplicated skiplink block in base template
+
+## [1.2.0](https://github.com/LandRegistry/govuk-frontend-jinja-example/releases/tag/1.2.0) - 22/01/2021
 
 ### Added
 

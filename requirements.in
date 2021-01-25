@@ -1,4 +1,5 @@
 flask-compress==1.8.0
+flask-talisman==0.7.0
 flask==1.1.2
 govuk-frontend-jinja==1.1.0
 gunicorn==20.0.4

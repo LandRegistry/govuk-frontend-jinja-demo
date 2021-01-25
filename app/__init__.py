@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_compress import Compress
+from flask_talisman import Talisman
 from jinja2 import ChoiceLoader, PackageLoader, PrefixLoader
 
 app = Flask(__name__, static_url_path="/assets")
@@ -11,6 +12,16 @@ app.jinja_loader = ChoiceLoader(
     ]
 )
 
+csp = {
+    "default-src": "'self'",
+    "script-src": [
+        "'self'",
+        "'sha256-+6WnXIl4mbFTCARd8N3COQmT3bJJmo32N8q8ZSQAIcU='",
+        "'sha256-l1eTVSK8DTnK8+yloud7wZUqFrI0atVo6VlC6PJvYaQ='",
+    ],
+}
+
 Compress(app)
+Talisman(app, content_security_policy=csp)
 
 from app import routes

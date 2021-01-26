@@ -1,6 +1,6 @@
-# GOV.UK Frontend Jinja Example
+# GOV.UK Frontend Jinja Demo
 
-Example Flask application using the [GOV.UK Frontend Jinja](https://github.com/LandRegistry/govuk-frontend-jinja) macro port
+Demo Flask app using [GOV.UK Frontend Jinja](https://github.com/LandRegistry/govuk-frontend-jinja) macros.
 
 ## Getting started
 

@@ -22,25 +22,45 @@
 
 {% block footer %}
   {{ govukFooter({
+    'navigation': [
+      {
+        'title': 'This demo uses',
+        'columns': 1,
+        'items': [
+            {
+              'href': 'https://github.com/alphagov/govuk-frontend/releases/tag/v3.10.2',
+              'text': 'GOV.UK Frontend v3.10.2'
+            },
+            {
+              'href': 'https://github.com/LandRegistry/govuk-frontend-jinja/releases/tag/1.1.0',
+              'text': 'GOV.UK Frontend Jinja v1.1.0'
+            }
+          ]
+      },
+      {
+        'title': 'More information',
+        'columns': 1,
+        'items': [
+            {
+              'href': "https://github.com/LandRegistry/govuk-frontend-jinja",
+              'text': "Package source code"
+            },
+            {
+              'href': "https://github.com/LandRegistry/govuk-frontend-jinja/actions",
+              'text': "Build pipeline"
+            },
+            {
+              'href': "https://pypi.org/project/govuk-frontend-jinja/",
+              'text': "PyPI package"
+            },
+            {
+              'href': "https://github.com/LandRegistry/govuk-frontend-jinja-demo",
+              'text': "Demo source code"
+            }
+          ]
+      }
+    ],
     'meta': {
-      'items': [
-        {
-          'href': "https://github.com/LandRegistry/govuk-frontend-jinja",
-          'text': "Source"
-        },
-        {
-          'href': "https://github.com/LandRegistry/govuk-frontend-jinja/actions",
-          'text': "Build"
-        },
-        {
-          'href': "https://pypi.org/project/govuk-frontend-jinja/",
-          'text': "Package"
-        },
-        {
-          'href': "https://github.com/LandRegistry/govuk-frontend-jinja-demo",
-          'text': "Demo"
-        }
-      ],
       'html': 'Built by <a href="https://www.gov.uk/government/organisations/land-registry" class="govuk-footer__link">HM Land Registry</a> and <a href="https://github.com/LandRegistry/govuk-frontend-jinja/graphs/contributors" class="govuk-footer__link">Contributors</a>'
     }
   }) }}

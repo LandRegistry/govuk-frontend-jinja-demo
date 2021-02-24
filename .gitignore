@@ -1,6 +1,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/git,venv,macos,linux,flask,vscode,python,windows,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,venv,macos,linux,flask,vscode,python,windows,jetbrains+all
 
+### GOV.UK Frontend ###
+app/static*
+govuk_components*
+
 ### Flask ###
 instance/*
 !instance/.gitignore

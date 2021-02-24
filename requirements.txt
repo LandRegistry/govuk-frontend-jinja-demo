@@ -6,7 +6,7 @@
 #
 brotli==1.0.9             # via flask-compress
 click==7.1.2              # via flask
-flask-compress==1.8.0     # via -r requirements.in
+flask-compress==1.9.0     # via -r requirements.in
 flask-talisman==0.7.0     # via -r requirements.in
 flask==1.1.2              # via -r requirements.in, flask-compress
 govuk-frontend-jinja==1.2.0  # via -r requirements.in

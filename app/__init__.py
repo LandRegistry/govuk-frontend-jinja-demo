@@ -28,4 +28,4 @@ csp = {
 Compress(app)
 Talisman(app, content_security_policy=csp)
 
-from app import routes
+from app import routes  # noqa: E402, F401

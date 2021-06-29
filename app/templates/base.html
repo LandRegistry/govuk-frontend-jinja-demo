@@ -8,8 +8,8 @@
   <meta name="description" content="GOV.UK Frontend Jinja Demo">
   <meta name="keywords" content="GOV.UK, govuk, gov, government, uk, frontend, ui, user interface, jinja, python, flask, port, template, templating, macro, component, design system, html, demo, example">
   <meta name="author" content="HM Land Registry">
-  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.12.0.min.css') }}" /><!--<![endif]-->
-  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.12.0.min.css') }}" /><![endif]-->
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-3.13.0.min.css') }}" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='govuk-frontend-ie8-3.13.0.min.css') }}" /><![endif]-->
 {% endblock %}
 
 {% block header %}
@@ -28,12 +28,12 @@
         'columns': 1,
         'items': [
             {
-              'href': 'https://github.com/alphagov/govuk-frontend/releases/tag/v3.12.0',
-              'text': 'GOV.UK Frontend v3.12.0'
+              'href': 'https://github.com/alphagov/govuk-frontend/releases/tag/v3.13.0',
+              'text': 'GOV.UK Frontend v3.13.0'
             },
             {
-              'href': 'https://github.com/LandRegistry/govuk-frontend-jinja/releases/tag/1.3.0',
-              'text': 'GOV.UK Frontend Jinja v1.3.0'
+              'href': 'https://github.com/LandRegistry/govuk-frontend-jinja/releases/tag/1.4.0',
+              'text': 'GOV.UK Frontend Jinja v1.4.0'
             }
           ]
       },
@@ -68,7 +68,7 @@
 
 {% block bodyEnd %}
   <!--[if gt IE 8]><!-->
-  <script src="{{ url_for('static', filename='govuk-frontend-3.12.0.min.js') }}"> </script>
+  <script src="{{ url_for('static', filename='govuk-frontend-3.13.0.min.js') }}"> </script>
   <script>window.GOVUKFrontend.initAll()</script>
   <!--<![endif]-->
 {% endblock %}

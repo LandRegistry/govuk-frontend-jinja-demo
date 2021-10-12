@@ -3,6 +3,6 @@ flask-talisman==0.8.1
 flask==1.1.4  # Latest 2.0.2
 govuk-frontend-jinja==1.4.0
 gunicorn==20.1.0
-python-dotenv==0.18.0  # Latest 0.19.1
+python-dotenv==0.19.1
 # Generated with piprot 0.9.10
-# Your requirements are 253 days out of date
+# Your requirements are 143 days out of date

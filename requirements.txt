@@ -28,7 +28,7 @@ jinja2==2.11.3
     #   govuk-frontend-jinja
 markupsafe==2.0.1
     # via jinja2
-python-dotenv==0.18.0
+python-dotenv==0.19.1
     # via -r requirements.in
 six==1.16.0
     # via flask-talisman

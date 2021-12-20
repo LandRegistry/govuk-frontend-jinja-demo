@@ -3,6 +3,6 @@ flask-talisman==0.8.1
 flask==2.0.2
 govuk-frontend-jinja==1.5.1
 gunicorn==20.1.0
-python-dotenv==0.19.1
+python-dotenv==0.19.2
 # Generated with piprot 0.9.10
 # Looks like you've been keeping up to date, time for a delicious beverage!

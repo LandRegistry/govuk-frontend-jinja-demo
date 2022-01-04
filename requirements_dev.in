@@ -1,0 +1,10 @@
+bandit==1.7.1
+black==21.12b0
+hacking==4.1.0
+isort==5.10.1
+pep8-naming<0.12.0
+pip-tools==6.4.0
+piprot==0.9.11
+safety==1.10.3
+# Generated with piprot 0.9.10
+# Looks like you've been keeping up to date, time for a delicious beverage!

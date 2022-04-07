@@ -4,15 +4,15 @@
 #
 #    pip-compile requirements_dev.in
 #
-bandit==1.7.1
+bandit==1.7.4
     # via -r requirements_dev.in
-black==21.12b0
+black==22.3.0
     # via -r requirements_dev.in
 certifi==2021.10.8
     # via requests
-charset-normalizer==2.0.9
+charset-normalizer==2.0.12
     # via requests
-click==8.0.3
+click==8.1.2
     # via
     #   black
     #   pip-tools
@@ -27,7 +27,7 @@ flake8-polyfill==1.0.2
     # via pep8-naming
 gitdb==4.0.9
     # via gitpython
-gitpython==3.1.24
+gitpython==3.1.27
     # via bandit
 hacking==4.1.0
     # via -r requirements_dev.in
@@ -45,29 +45,29 @@ packaging==21.3
     #   safety
 pathspec==0.9.0
     # via black
-pbr==5.8.0
+pbr==5.8.1
     # via stevedore
 pep517==0.12.0
     # via pip-tools
 pep8-naming==0.11.1
     # via -r requirements_dev.in
-pip-tools==6.4.0
+pip-tools==6.6.0
     # via -r requirements_dev.in
 piprot==0.9.11
     # via -r requirements_dev.in
-platformdirs==2.4.1
+platformdirs==2.5.1
     # via black
 pycodestyle==2.6.0
     # via flake8
 pyflakes==2.2.0
     # via flake8
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via packaging
 pyyaml==6.0
     # via
     #   bandit
     #   dparse
-requests==2.27.0
+requests==2.27.1
     # via
     #   piprot
     #   requests-futures
@@ -84,15 +84,13 @@ stevedore==3.5.0
     # via bandit
 toml==0.10.2
     # via dparse
-tomli==1.2.3
+tomli==2.0.1
     # via
     #   black
     #   pep517
-typing-extensions==4.0.1
-    # via
-    #   black
-    #   gitpython
-urllib3==1.26.7
+typing-extensions==4.1.1
+    # via black
+urllib3==1.26.9
     # via requests
 wheel==0.37.1
     # via pip-tools

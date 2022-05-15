@@ -4,6 +4,8 @@
 #
 #    pip-compile requirements_dev.in
 #
+attrs==21.4.0
+    # via flake8-bugbear
 bandit==1.7.4
     # via -r requirements_dev.in
 black==22.3.0
@@ -21,8 +23,11 @@ dparse==0.5.1
     # via safety
 flake8==3.8.4
     # via
+    #   flake8-bugbear
     #   flake8-polyfill
     #   hacking
+flake8-bugbear==22.4.25
+    # via -r requirements_dev.in
 flake8-polyfill==1.0.2
     # via pep8-naming
 gitdb==4.0.9

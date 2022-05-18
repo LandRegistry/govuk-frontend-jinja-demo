@@ -16,7 +16,7 @@ flask-compress==1.12
     # via -r requirements.in
 flask-talisman==1.0.0
     # via -r requirements.in
-govuk-frontend-jinja==2.1.0
+govuk-frontend-jinja==2.2.0
     # via -r requirements.in
 gunicorn==20.1.0
     # via -r requirements.in

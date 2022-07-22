@@ -20,6 +20,7 @@
 {%- from 'govuk_frontend_jinja/components/inset-text/macro.html' import govukInsetText -%}
 {%- from 'govuk_frontend_jinja/components/label/macro.html' import govukLabel -%}
 {%- from 'govuk_frontend_jinja/components/notification-banner/macro.html' import govukNotificationBanner -%}
+{%- from 'govuk_frontend_jinja/components/pagination/macro.html' import govukPagination -%}
 {%- from 'govuk_frontend_jinja/components/panel/macro.html' import govukPanel -%}
 {%- from 'govuk_frontend_jinja/components/phase-banner/macro.html' import govukPhaseBanner -%}
 {%- from 'govuk_frontend_jinja/components/radios/macro.html' import govukRadios -%}
@@ -102,6 +103,8 @@
               {{ govukLabel(fixture.options)}}
             {% elif fixtures.component == 'notification-banner' %}
               {{ govukNotificationBanner(fixture.options)}}
+            {% elif fixtures.component == 'pagination' %}
+              {{ govukPagination(fixture.options)}}
             {% elif fixtures.component == 'panel' %}
               {{ govukPanel(fixture.options)}}
             {% elif fixtures.component == 'phase-banner' %}
